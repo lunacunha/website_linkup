@@ -1,7 +1,21 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Image from 'next/image'
 import { workdata } from '@/app/types/workdata'
+
+const mobileSliderSettings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: false,
+  speed: 500,
+  cssEase: 'linear',
+}
 
 const Work = () => {
   const [work, setWork] = useState<workdata[]>([])
@@ -21,6 +35,32 @@ const Work = () => {
     fetchData()
   }, [])
 
+  const renderWorkCard = (items: workdata, i: number) => (
+    <div
+      key={i}
+      className='rounded-[1.75rem] border border-slate-200 bg-white p-3 text-center sm:p-5'>
+
+      <div className='mx-auto w-full max-w-[360px] sm:max-w-[320px]'>
+        <div className='relative aspect-square w-full overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100'>
+          <Image
+            src={items.imgSrc}
+            alt={items.name}
+            fill
+            className='object-cover'
+          />
+        </div>
+      </div>
+
+      <h6 className='text-xl text-black font-bold pt-5'>
+        {items.name}
+      </h6>
+
+      <p className='text-base font-normal pt-3 text-black/60'>
+        {items.profession}
+      </p>
+    </div>
+  )
+
   return (
     <section
       id='Team'
@@ -37,32 +77,18 @@ const Work = () => {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-12'>
-          {work.map((items, i) => (
-            <div
-              key={i}
-              className='rounded-[1.75rem] border border-slate-200 bg-white p-4 text-center sm:p-5'>
-
-              <div className='mx-auto w-full max-w-[320px]'>
-                <div className='relative aspect-square overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100'>
-                  <Image
-                    src={items.imgSrc}
-                    alt={items.name}
-                    fill
-                    className='object-cover'
-                  />
-                </div>
+        <div className='mt-12 lg:hidden'>
+          <Slider {...mobileSliderSettings}>
+            {work.map((items, i) => (
+              <div key={i} className='px-2 pb-2'>
+                {renderWorkCard(items, i)}
               </div>
+            ))}
+          </Slider>
+        </div>
 
-              <h6 className='text-xl text-black font-bold pt-6'>
-                {items.name}
-              </h6>
-
-              <p className='text-base font-normal pt-3 text-black/60'>
-                {items.profession}
-              </p>
-            </div>
-          ))}
+        <div className='mt-12 hidden gap-6 lg:grid lg:grid-cols-3'>
+          {work.map((items, i) => renderWorkCard(items, i))}
         </div>
       </div>
     </section>

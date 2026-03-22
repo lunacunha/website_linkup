@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { aboutdata } from '@/app/types/aboutdata'
-import Image from 'next/image'
 import AboutSkeleton from '../../Skeleton/AboutUs'
 
 const Aboutus = () => {
@@ -32,35 +31,44 @@ const Aboutus = () => {
           <p className='text-center text-primary/80 text-sm font-semibold tracking-[0.22em] uppercase'>
             Sobre o programa
           </p>
-          <h2 className='text-center pb-6 mt-4'>Como o LinkUp Academy cria proximidade.</h2>
+          <h2 className='mt-4 text-center pb-4'>
+            Como o LinkUp Academy cria proximidade.
+          </h2>
           <p className='mx-auto max-w-3xl text-center text-lg leading-8 text-black/60'>
             Um modelo pensado para dar mais contexto, ligação e experiências
             reais ao percurso académico.
           </p>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
-            {loading
-              ? Array.from({ length: 3 }).map((_, index) => (
-                  <AboutSkeleton key={index} />
-                ))
-              : about.map((item, i) => (
-                  <div
-                    key={i}
-                    className='rounded-[1.75rem] border border-slate-200 bg-white p-8 transition-colors duration-300 hover:border-primary/20 hover:bg-slate-50'>
-                    <h5 className='mb-5'>
-                      {item.heading}
-                    </h5>
-                    <Image
-                      src={item.imgSrc}
-                      alt={item.imgSrc}
-                      width={100}
-                      height={100}
-                      className='mb-5'
-                    />
-                    <p className='text-lg font-normal leading-8 text-black/70'>
-                      {item.paragraph}
-                    </p>
-                  </div>
-                ))}
+
+          <div className='mt-14 rounded-[1.9rem] border border-slate-200 bg-white px-6 py-4 sm:px-8 lg:px-10 lg:py-6'>
+            <div className='grid grid-cols-1 lg:grid-cols-3'>
+              {loading
+                ? Array.from({ length: 3 }).map((_, index) => (
+                    <AboutSkeleton key={index} />
+                  ))
+                : about.map((item, i) => (
+                    <div
+                      key={i}
+                      className={`py-8 lg:px-8 ${
+                        i < about.length - 1
+                          ? 'border-b border-slate-200 lg:border-b-0 lg:border-r'
+                          : ''
+                      }`}>
+                      <p className='text-sm font-semibold tracking-[0.22em] text-primary/65 uppercase'>
+                        {String(i + 1).padStart(2, '0')}
+                      </p>
+                      <h5 className='mt-5 text-[1.7rem] leading-tight text-[#123b8f]'>
+                        {i === 0
+                          ? 'O que é'
+                          : i === 1
+                            ? 'Para quem'
+                            : 'Porque existe'}
+                      </h5>
+                      <p className='mt-6 text-lg font-normal leading-8 text-black/68'>
+                        {item.paragraph}
+                      </p>
+                    </div>
+                  ))}
+            </div>
           </div>
         </div>
       </div>
