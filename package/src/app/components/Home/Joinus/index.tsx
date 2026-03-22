@@ -7,7 +7,7 @@ const Join = () => {
     <section className='overflow-hidden py-12 lg:py-16'>
       <div className='container mx-auto max-w-7xl px-4'>
         <div className='mx-auto max-w-5xl rounded-[2rem] border border-slate-200 bg-slate-50 px-6 py-12 text-center sm:px-10 lg:px-14'>
-          <p className='text-primary text-lg font-normal tracking-widest uppercase'>
+          <p className='text-[#c4510a] text-lg font-normal tracking-widest uppercase'>
             Newsletter
           </p>
 
@@ -36,7 +36,7 @@ const Join = () => {
               <div className='mt-4 sm:mr-2 sm:mt-0'>
                 <Link
                   href='#'
-                  className='inline-block w-full rounded-xl bg-primary px-10 py-4 text-center text-xl font-semibold text-white duration-300 hover:bg-darkmode sm:rounded-full'>
+                  className='inline-block w-full rounded-xl bg-[#c4510a] px-10 py-4 text-center text-xl font-semibold text-white duration-300 hover:bg-[#9f420c] sm:rounded-full'>
                   Subscrever
                 </Link>
               </div>

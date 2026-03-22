@@ -1,1 +1,5 @@
-export type featureddata = { heading: string; imgSrc: string }
+export type featureddata = {
+  heading: string
+  description: string
+  imgSrc: string
+}

@@ -54,7 +54,7 @@ const Manage = () => {
       </p>
 
       <Link href='#contact'>
-        <button className='mb-8 rounded-full border border-primary/25 bg-primary/5 px-10 py-4 text-sm font-bold text-primary transition hover:bg-primary hover:text-white hover:cursor-pointer'>
+        <button className='mb-8 rounded-full border border-[#c4510a]/25 bg-[#c4510a]/5 px-10 py-4 text-sm font-bold text-[#c4510a] transition hover:cursor-pointer hover:bg-[#c4510a] hover:text-white'>
           Pedir mais informações
         </button>
       </Link>

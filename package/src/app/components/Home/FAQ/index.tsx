@@ -10,24 +10,24 @@ import {
 const FAQ = () => {
   const items = [
     {
-      question: 'O que é o Nurture Program?',
+      question: 'O que é exatamente o Nurture Program?',
       answer:
-        'É um programa de acompanhamento contínuo que aproxima estudantes, faculdades e empresas, criando experiências práticas, conteúdos relevantes e contacto com oportunidades reais.',
+        'É um programa de acompanhamento contínuo que aproxima estudantes, faculdades e empresas através de conteúdos, experiências práticas e contacto com oportunidades reais.',
     },
     {
       question: 'Quem pode participar?',
       answer:
-        'O programa dirige-se principalmente a estudantes de licenciatura e mestrado, mas envolve também faculdades e empresas parceiras.',
+        'Destina-se sobretudo a estudantes de licenciatura e mestrado, envolvendo também faculdades e empresas parceiras.',
     },
     {
-      question: 'Como funciona na prática?',
+      question: 'Como funciona ao longo do ano?',
       answer:
-        'O programa combina newsletters, visitas, open days, job shadowing, desafios e outras experiências que aproximam os participantes do ecossistema profissional.',
+        'Ao longo do ano, o programa combina newsletters, visitas, open days, job shadowing e outras iniciativas que aproximam os participantes do ecossistema profissional.',
     },
     {
-      question: 'Há ligação direta com empresas?',
+      question: 'Existe contacto direto com empresas?',
       answer:
-        'Sim. O programa foi desenhado precisamente para criar contacto progressivo com empresas, profissionais e oportunidades concretas.',
+        'Sim. O programa foi desenhado para criar contacto progressivo com empresas, profissionais e oportunidades concretas.',
     },
   ]
 
@@ -37,35 +37,36 @@ const FAQ = () => {
       className='relative overflow-hidden py-12 lg:py-16 dark:bg-darkmode'>
       <div className='container mx-auto max-w-7xl px-4'>
         <div className='mx-auto max-w-3xl text-center'>
-          <p className='text-sm font-semibold uppercase tracking-[0.22em] text-primary/80'>
+          <p className='text-sm font-semibold uppercase tracking-[0.22em] text-[#c4510a]'>
             FAQ
           </p>
           <h2 className='mt-4 max-w-3xl mx-auto'>
-            Perguntas frequentes sobre o programa.
+            Perguntas frequentes
           </h2>
           <p className='mt-5 text-lg leading-8 text-black/60'>
-            Respostas objetivas para explicar o funcionamento da iniciativa sem
-            recorrer a blocos pesados ou demasiado promocionais.
+            Respostas simples para perceber rapidamente como funciona.
           </p>
         </div>
 
-        <div className='mx-auto mt-12 flex w-full max-w-5xl flex-col gap-4'>
-          {items.map((item) => (
+        <div className='mx-auto mt-14 flex w-full max-w-5xl flex-col gap-5'>
+          {items.map((item, index) => (
             <div
               key={item.question}
-              className='rounded-[1.6rem] border border-slate-200 bg-white/90 p-6 sm:p-8'>
-              <Disclosure>
+              className='rounded-[1.5rem] border border-slate-200/80 bg-slate-50/60 px-6 py-5 transition-colors duration-200 hover:bg-white sm:px-8 sm:py-6'>
+              <Disclosure defaultOpen={index === 0}>
                 {({ open }) => (
                   <>
-                    <DisclosureButton className='flex w-full items-center justify-between gap-6 text-left text-xl font-semibold text-black focus:outline-hidden hover:cursor-pointer sm:text-2xl'>
+                    <DisclosureButton className='flex w-full items-center justify-between gap-6 text-left text-lg font-semibold text-black focus:outline-hidden hover:cursor-pointer sm:text-xl'>
                       <span>{item.question}</span>
-                      <div
-                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-black/70 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}>
-                        <Icon icon='lucide:chevron-up' width='20' height='20' />
-                      </div>
+                      <Icon
+                        icon={open ? 'lucide:minus' : 'lucide:plus'}
+                        width='18'
+                        height='18'
+                        className='shrink-0 text-black/55'
+                      />
                     </DisclosureButton>
 
-                    <DisclosurePanel className='mt-5 border-t border-slate-200 pt-5 text-base leading-8 text-black/65'>
+                    <DisclosurePanel className='mt-5 border-t border-slate-200/80 pt-5 text-base leading-8 text-black/65'>
                       {item.answer}
                     </DisclosurePanel>
                   </>

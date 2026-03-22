@@ -28,7 +28,7 @@ const Aboutus = () => {
     <section id='About' className='overflow-hidden py-12 lg:py-16'>
       <div className='container mx-auto max-w-7xl px-4 relative z-1'>
         <div className='rounded-[2rem] border border-slate-200/80 bg-slate-50/70 p-8 sm:p-10 lg:p-12'>
-          <p className='text-center text-primary/80 text-sm font-semibold tracking-[0.22em] uppercase'>
+          <p className='text-center text-[#c4510a] text-sm font-semibold tracking-[0.22em] uppercase'>
             Sobre o programa
           </p>
           <h2 className='mt-4 text-center pb-4'>
@@ -53,10 +53,10 @@ const Aboutus = () => {
                           ? 'border-b border-slate-200 lg:border-b-0 lg:border-r'
                           : ''
                       }`}>
-                      <p className='text-sm font-semibold tracking-[0.22em] text-primary/65 uppercase'>
+                      <p className='text-sm font-semibold tracking-[0.22em] text-[#c4510a]/80 uppercase'>
                         {String(i + 1).padStart(2, '0')}
                       </p>
-                      <h5 className='mt-5 text-[1.7rem] leading-tight text-[#123b8f]'>
+                      <h5 className='mt-5 text-[1.7rem] leading-tight text-[#c4510a]'>
                         {i === 0
                           ? 'O que é'
                           : i === 1

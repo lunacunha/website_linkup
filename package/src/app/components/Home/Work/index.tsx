@@ -38,10 +38,10 @@ const Work = () => {
   const renderWorkCard = (items: workdata, i: number) => (
     <div
       key={i}
-      className='rounded-[1.75rem] border border-slate-200 bg-white p-3 text-center sm:p-5'>
+      className='rounded-[1.75rem] border border-[#d8d1c3] bg-[#fffdf9] p-3 text-center sm:p-5'>
 
       <div className='mx-auto w-full max-w-[360px] sm:max-w-[320px]'>
-        <div className='relative aspect-square w-full overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-100'>
+        <div className='relative aspect-square w-full overflow-hidden rounded-[1.5rem] border border-[#d8d1c3] bg-[#f4ecdf]'>
           <Image
             src={items.imgSrc}
             alt={items.name}

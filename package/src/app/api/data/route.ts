@@ -61,19 +61,23 @@ const WorkData: workdata[] = [
 // featured data
 const FeaturedData: featureddata[] = [
   {
-    heading: 'Newsletter segmentada com conteúdos relevantes.',
-    imgSrc: '/images/featured/feat1.jpg',
+    heading: 'Newsletter segmentada',
+    description: 'Conteúdo relevante e regular para manter proximidade.',
+    imgSrc: '/images/featured/email.png',
   },
   {
-    heading: 'Open days e visitas às instalações.',
-    imgSrc: '/images/featured/feat2.jpg',
+    heading: 'Open days',
+    description: 'Visitas que aproximam estudantes e contexto real.',
+    imgSrc: '/images/featured/deloitte.webp',
   },
   {
-    heading: 'Job shadowing com contacto real.',
+    heading: 'Job shadowing',
+    description: 'Observação prática de funções e ambientes profissionais.',
     imgSrc: '/images/featured/feat3.jpg',
   },
   {
-    heading: 'Hackathons e experiências práticas.',
+    heading: 'Hackathons',
+    description: 'Desafios colaborativos com contacto aplicado ao mercado.',
     imgSrc: '/images/featured/feat4.jpg',
   },
 ]

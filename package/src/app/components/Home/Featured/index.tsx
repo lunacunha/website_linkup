@@ -7,43 +7,6 @@ import Image from 'next/image'
 import { featureddata } from '@/app/types/featureddata'
 import FeaturedSkeleton from '../../Skeleton/Featured'
 
-function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
-  const { className, style, onClick } = props
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: 'black',
-        padding: '28px',
-        borderRadius: '20px',
-      }}
-      onClick={onClick}
-    />
-  )
-}
-
-function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
-  const { className, style, onClick } = props
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: 'black',
-        padding: '28px',
-        borderRadius: '20px',
-      }}
-      onClick={onClick}
-    />
-  )
-}
 const settings = {
   dots: true,
   infinite: true,
@@ -52,24 +15,10 @@ const settings = {
   arrows: false,
   autoplay: false,
   speed: 500,
-  nextArrow: (
-    <SampleNextArrow
-      className={undefined}
-      style={undefined}
-      onClick={undefined}
-    />
-  ),
-  prevArrow: (
-    <SamplePrevArrow
-      className={undefined}
-      style={undefined}
-      onClick={undefined}
-    />
-  ),
   cssEase: 'linear',
   responsive: [
     {
-      breakpoint: 800,
+      breakpoint: 1024,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -106,7 +55,7 @@ const Featured = () => {
       className='relative scroll-mt-28 overflow-hidden py-12 lg:py-16'>
       <div className='container mx-auto max-w-7xl px-4 relative'>
         <div className='mx-auto mb-12 max-w-3xl text-center overflow-hidden'>
-          <p className='text-sm font-semibold uppercase tracking-[0.22em] text-primary/80'>
+          <p className='text-sm font-semibold uppercase tracking-[0.22em] text-[#c4510a]'>
             Iniciativas
           </p>
           <h3 className='mt-4'>Experiências que aproximam decisão e prática.</h3>
@@ -118,24 +67,27 @@ const Featured = () => {
 
         <Slider {...settings}>
           {loading
-            ? Array.from({ length: 2 }).map((_, index) => (
+            ? Array.from({ length: 4 }).map((_, index) => (
                 <FeaturedSkeleton key={index} />
               ))
             : featured.map((items, i) => (
-                <div key={i}>
-                  <div className='m-3 rounded-[1.75rem] border border-slate-200 bg-white p-4'>
-                    <div className='relative w-full h-[420px] overflow-hidden rounded-[1.35rem] bg-slate-100'>
+                <div key={i} className='px-3 pb-2'>
+                  <div className='rounded-[1.65rem] border border-slate-200 bg-white p-4 sm:p-5'>
+                    <div className='relative aspect-[4/3] w-full overflow-hidden rounded-[1.25rem] bg-slate-100'>
                       <Image
                         src={items.imgSrc}
                         alt={items.heading}
                         fill
-                        className='object-cover rounded-2xl'
+                        className='object-cover'
                       />
                     </div>
-                    <div>
-                      <h4 className='max-w-sm font-bold text-center sm:text-start mb-2 mt-6 text-black'>
+                    <div className='mt-5'>
+                      <h4 className='text-center text-[1.55rem] font-semibold text-black sm:text-left'>
                         {items.heading}
                       </h4>
+                      <p className='mt-2 text-center text-base leading-7 text-black/60 sm:text-left'>
+                        {items.description}
+                      </p>
                     </div>
                   </div>
                 </div>
