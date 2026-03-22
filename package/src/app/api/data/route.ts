@@ -4,8 +4,6 @@ import { HeaderItem } from '@/app/types/menu'
 import { aboutdata } from '@/app/types/aboutdata'
 import { workdata } from '@/app/types/workdata'
 import { featureddata } from '@/app/types/featureddata'
-import { testimonials } from '@/app/types/testimonials'
-import { footerlinks } from '@/app/types/footerlinks'
 
 // header nav-links data
 const headerData: HeaderItem[] = [
@@ -129,73 +127,6 @@ const PlansData = [
   },
 ]
 
-// testimonial data
-const TestimonialsData: testimonials[] = [
-  {
-    name: 'Estudantes',
-    profession: 'Licenciatura e Mestrado',
-    comment:
-      'Sinto falta de orientação estruturada para tomar decisões informadas sobre o meu futuro profissional.',
-    imgSrc: '/images/testimonial/user1.svg',
-    rating: 5,
-  },
-  {
-    name: 'Estudantes',
-    profession: 'Ligação ao mercado',
-    comment:
-      'Não existe contacto real com o mercado e as empresas ao longo do percurso académico.',
-    imgSrc: '/images/testimonial/user2.svg',
-    rating: 5,
-  },
-  {
-    name: 'Estudantes',
-    profession: 'Aprendizagem aplicada',
-    comment:
-      'Quero aprender a fazer, não apenas a ouvir, através de experiências práticas e contacto real.',
-    imgSrc: '/images/testimonial/user3.svg',
-    rating: 5,
-  },
-]
-
-
-// footer links data
-const FooterLinksData: footerlinks[] = [
-  {
-    section: 'Programa',
-    links: [
-      { label: 'Sobre', href: '#About' },
-      { label: 'Para Quem', href: '#Team' },
-      { label: 'Estratégia', href: '#FAQ' },
-      { label: 'Iniciativas', href: '#featured' },
-    ],
-  },
-  {
-    section: 'Iniciativas',
-    links: [
-      { label: 'Newsletter', href: '/' },
-      { label: 'Open Days', href: '/' },
-      { label: 'Job Shadowing', href: '/' },
-      { label: 'Hackathons', href: '/' },
-    ],
-  },
-  {
-    section: 'Parceiros',
-    links: [
-      { label: 'Estudantes', href: '/' },
-      { label: 'Faculdades', href: '/' },
-      { label: 'Empresas', href: '/' },
-    ],
-  },
-  {
-    section: 'Contacto',
-    links: [
-      { label: 'Email', href: 'mailto:hello@gotalent.com' },
-      { label: 'Instagram', href: '/' },
-      { label: 'LinkedIn', href: '/' },
-    ],
-  },
-]
-
 export const GET = () => {
   return NextResponse.json({
     headerData,
@@ -203,7 +134,5 @@ export const GET = () => {
     WorkData,
     FeaturedData,
     PlansData,
-    TestimonialsData,
-    FooterLinksData,
   })
 }
