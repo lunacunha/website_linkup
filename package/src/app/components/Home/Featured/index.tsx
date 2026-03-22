@@ -104,7 +104,7 @@ const Featured = () => {
     <section className="relative bg-deepSlate dark:bg-darkmode  after:absolute after:w-1/4 after:h-1/4 after:bg-[url('/images/wework/vector.svg')]  after:top-72 after:right-0 after:bg-no-repeat">
       <div className='container mx-auto max-w-7xl px-4 relative'>
         <div className='text-center overflow-hidden'>
-          <h3 className='my-5'>Featured works.</h3>
+          <h3 className='my-5'>As nossas iniciativas.</h3>
         </div>
 
         <Slider {...settings}>
@@ -115,13 +115,14 @@ const Featured = () => {
             : featured.map((items, i) => (
                 <div key={i}>
                   <div className='bg-transparent m-3 rounded-3xl'>
-                    <Image
-                      src={items.imgSrc}
-                      alt='gaby'
-                      width={636}
-                      height={620}
-                      className='rounded-2xl'
-                    />
+                    <div className='relative w-full h-[420px] overflow-hidden rounded-2xl'>
+                      <Image
+                        src={items.imgSrc}
+                        alt={items.heading}
+                        fill
+                        className='object-cover rounded-2xl'
+                      />
+                    </div>
                     <div>
                       <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black'>
                         {items.heading}

@@ -71,12 +71,12 @@ const FeaturedData: featureddata[] = [
     imgSrc: '/images/featured/feat2.jpg',
   },
   {
-    heading: 'Job shadowing e experiências reais com profissionais.',
-    imgSrc: '/images/featured/feat1.jpg',
+    heading: 'Job shadowing com contacto real.',
+    imgSrc: '/images/featured/feat3.jpg',
   },
   {
-    heading: 'Hackathons, desafios e oportunidades antecipadas.',
-    imgSrc: '/images/featured/feat2.jpg',
+    heading: 'Hackathons e experiências práticas.',
+    imgSrc: '/images/featured/feat4.jpg',
   },
 ]
 
