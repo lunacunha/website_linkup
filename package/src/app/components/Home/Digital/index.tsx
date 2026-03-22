@@ -1,38 +1,38 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 const Digital = () => {
   return (
-    <section className='relative bg-cover bg-center overflow-hidden'>
+    <section className='relative overflow-hidden py-10 lg:py-14'>
       <div className='container mx-auto max-w-7xl px-4'>
-        <div className="rounded-3xl bg-primary bg-[url('/images/digital/bg.svg')] bg-no-repeat bg-right-top lg:pb-60 pb-32 relative">
-          <div className='grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2'>
+        <div className='relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 lg:pb-24 pb-16'>
+          <div className='pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-linear-to-l from-white/80 to-transparent xl:block' />
+          <div className='grid grid-cols-1 xl:grid-cols-2'>
             {/* COLUMN-1 */}
-            <div className='pt-24 lg:pl-24'>
-              <p className='text-lg font-normal text-white mb-5 tracking-widest text-center lg:text-start uppercase mt-5'>
-                Who we are
+            <div className='px-8 pt-16 text-center sm:px-12 lg:px-16 lg:pt-20 lg:text-left'>
+              <p className='text-sm font-semibold text-primary/80 mb-4 tracking-[0.22em] uppercase'>
+                Quem somos
               </p>
-              <h2 className='text-white mb-8 leading-tight text-center lg:text-start lg:w-full'>
-                We are a digital agency that builds amazing products.
+              <h2 className='leading-tight lg:w-full'>
+                Ligamos academia e mercado com experiências mais próximas da
+                realidade.
               </h2>
-              <div className='text-center lg:text-start'>
-                <Link
-                  href='#'
-                  className='text-xl font-semibold text-white bg-deep-slate/80 hover:bg-deep-slate py-4 px-12 rounded-full'>
-                  Get started
-                </Link>
-              </div>
+              <p className='mt-6 max-w-2xl text-lg leading-8 text-black/65'>
+                O programa foi desenhado para transformar informação dispersa em
+                orientação contínua, criando um percurso mais claro entre
+                talento, aprendizagem e oportunidades.
+              </p>
             </div>
           </div>
           {/* COLUMN-2 */}
-          <div className='absolute -bottom-16 -right-20 xl:block hidden'>
+          <div className='absolute bottom-0 right-0 hidden xl:block'>
             <Image
               src='/images/digital/girldoodle.svg'
               alt='doodle'
               width={815}
               height={691}
+              className='max-w-[38rem] opacity-100 saturate-110'
             />
           </div>
         </div>

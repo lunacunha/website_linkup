@@ -1,9 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { aboutdata } from '@/app/types/aboutdata'
-import Link from 'next/link'
 import Image from 'next/image'
-import { Icon } from '@iconify/react'
 import AboutSkeleton from '../../Skeleton/AboutUs'
 
 const Aboutus = () => {
@@ -28,21 +26,18 @@ const Aboutus = () => {
   }, [])
 
   return (
-    <section id='About' className=' bg-cover bg-center overflow-hidden'>
+    <section id='About' className='overflow-hidden py-12 lg:py-16'>
       <div className='container mx-auto max-w-7xl px-4 relative z-1'>
-        <div className='p-12 bg-grey rounded-3xl'>
-          <Image
-            src='/images/aboutus/dots.svg'
-            width={100}
-            height={100}
-            alt='dots-image'
-            className='absolute bottom-1 -left-20'
-          />
-          <p className='text-center text-primary text-lg tracking-widest uppercase mt-10'>
-            about us
+        <div className='rounded-[2rem] border border-slate-200/80 bg-slate-50/70 p-8 sm:p-10 lg:p-12'>
+          <p className='text-center text-primary/80 text-sm font-semibold tracking-[0.22em] uppercase'>
+            Sobre o programa
           </p>
-          <h2 className='text-center pb-12'>Know more about us.</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-10'>
+          <h2 className='text-center pb-6 mt-4'>Como o LinkUp Academy cria proximidade.</h2>
+          <p className='mx-auto max-w-3xl text-center text-lg leading-8 text-black/60'>
+            Um modelo pensado para dar mais contexto, ligação e experiências
+            reais ao percurso académico.
+          </p>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12'>
             {loading
               ? Array.from({ length: 3 }).map((_, index) => (
                   <AboutSkeleton key={index} />
@@ -50,8 +45,8 @@ const Aboutus = () => {
               : about.map((item, i) => (
                   <div
                     key={i}
-                    className='hover:bg-darkmode bg-white rounded-3xl p-8 shadow-xl group'>
-                    <h5 className='group-hover:text-white mb-5'>
+                    className='rounded-[1.75rem] border border-slate-200 bg-white p-8 transition-colors duration-300 hover:border-primary/20 hover:bg-slate-50'>
+                    <h5 className='mb-5'>
                       {item.heading}
                     </h5>
                     <Image
@@ -61,19 +56,9 @@ const Aboutus = () => {
                       height={100}
                       className='mb-5'
                     />
-                    <p className='text-lg font-normal text-black group-hover:text-white mb-5'>
+                    <p className='text-lg font-normal leading-8 text-black/70'>
                       {item.paragraph}
                     </p>
-                    <Link
-                      href='#'
-                      className='text-18 font-semibold text-primary hover-underline flex items-center'>
-                      {item.link}
-                      <Icon
-                        icon='tabler:chevron-right'
-                        width='20'
-                        height='20'
-                      />
-                    </Link>
                   </div>
                 ))}
           </div>

@@ -8,8 +8,6 @@
 
   --shadow-cause-shadow: 0px 4px 17px 0px #00000008;
   --shadow-linckedin: 0px 19px 30px 0px #00000033;
-  --shadow-manage-shadow: 0px 4px 5px 1px #c1c1c159;
-
   --transition-duration-150: 150ms;
 
   --spacing-25: 35.625rem;
@@ -47,8 +45,6 @@
 
   --blur-220: 220px;
   --blur-400: 400px;
-
-  --background-image-faq-bg: url('/images/faq/swirl.png');
 }
 
 /*
@@ -69,7 +65,7 @@
   }
 
   section {
-    @apply py-20;
+    @apply py-16;
   }
 
   h1 {
@@ -100,11 +96,4 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-.bg-joinus {
-  background-image: url('/images/joinus/horn.svg'),
-    url('/images/joinus/paint.svg');
-  background-repeat: no-repeat, no-repeat;
-  background-position: 90% 100%, 2% 18%;
 }

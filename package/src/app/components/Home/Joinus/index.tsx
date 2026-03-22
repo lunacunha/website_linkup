@@ -4,9 +4,9 @@ import Link from 'next/link'
 
 const Join = () => {
   return (
-    <section className='overflow-hidden bg-joinus py-16'>
+    <section className='overflow-hidden py-12 lg:py-16'>
       <div className='container mx-auto max-w-7xl px-4'>
-        <div className='text-center'>
+        <div className='mx-auto max-w-5xl rounded-[2rem] border border-slate-200 bg-slate-50 px-6 py-12 text-center sm:px-10 lg:px-14'>
           <p className='text-primary text-lg font-normal tracking-widest uppercase'>
             Newsletter
           </p>
@@ -20,28 +20,28 @@ const Join = () => {
             oportunidades e conteúdos relevantes que aproximam estudantes,
             faculdades e empresas.
           </p>
-        </div>
 
-        <div className='mx-auto max-w-3xl pt-8'>
-          <div className='sm:flex items-center mx-5 p-5 sm:p-2 rounded-xl justify-between bg-grey sm:rounded-full'>
+          <div className='mx-auto max-w-3xl pt-8'>
+            <div className='mx-0 rounded-[1.5rem] border border-slate-200 bg-white p-3 sm:flex sm:items-center sm:justify-between sm:rounded-full'>
 
-            <div className='flex-1'>
-              <input
-                type='email'
-                className='w-full py-4 sm:pl-6 lg:text-xl text-black bg-transparent focus:outline-hidden focus:text-black'
-                placeholder='O teu email'
-                autoComplete='off'
-              />
+              <div className='flex-1'>
+                <input
+                  type='email'
+                  className='w-full bg-transparent py-4 text-black focus:outline-hidden focus:text-black sm:pl-6 lg:text-xl'
+                  placeholder='O teu email'
+                  autoComplete='off'
+                />
+              </div>
+
+              <div className='mt-4 sm:mr-2 sm:mt-0'>
+                <Link
+                  href='#'
+                  className='inline-block w-full rounded-xl bg-primary px-10 py-4 text-center text-xl font-semibold text-white duration-300 hover:bg-darkmode sm:rounded-full'>
+                  Subscrever
+                </Link>
+              </div>
+
             </div>
-
-            <div className='sm:mr-2 mt-4 sm:mt-0'>
-              <Link
-                href='#'
-                className='w-full inline-block text-xl text-white font-semibold text-center rounded-xl sm:rounded-full bg-primary py-4 px-10 hover:bg-darkmode duration-300'>
-                Subscrever
-              </Link>
-            </div>
-
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ const Manage = () => {
   }, [])
 
   return (
-    <section id='services-section' className='py-16'>
+    <section id='services-section' className='py-10 lg:py-14'>
       <div className='container mx-auto max-w-7xl px-4'>
         <h2 className='text-center'>
           Packs do programa.
@@ -37,12 +37,12 @@ const Manage = () => {
           com oportunidades reais.
         </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14 gap-6'>
           {loading
             ? Array.from({ length: 3 }).map((_, i) => <PlansSkeleton key={i} />)
             : plans.map((items, i) => (
                 <div
-                  className='shadow-manage-shadow border border-border text-center p-10 rounded-3xl bg-white'
+                  className='rounded-[1.75rem] border border-slate-200 bg-white p-10 text-center'
                   key={i}>
                   <h5 className='mb-3'>{items.heading}</h5>
 
@@ -55,7 +55,7 @@ const Manage = () => {
                   </p>
 
                   <Link href='#contact'>
-                    <button className='text-sm font-bold text-primary bg-transparent hover:bg-primary hover:text-white border-2 border-primary rounded-full py-4 px-10 mb-8 hover:cursor-pointer'>
+                    <button className='mb-8 rounded-full border border-primary/25 bg-primary/5 px-10 py-4 text-sm font-bold text-primary transition hover:bg-primary hover:text-white hover:cursor-pointer'>
                       Pedir mais informações
                     </button>
                   </Link>

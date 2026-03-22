@@ -44,17 +44,17 @@ const WorkData: workdata[] = [
   {
     profession: 'Estudantes',
     name: 'Licenciatura e Mestrado',
-    imgSrc: '/images/wework/avatar.svg',
+    imgSrc: '/images/testimonial/students.jpg',
   },
   {
     profession: 'Faculdades',
     name: 'Universidades parceiras',
-    imgSrc: '/images/wework/avatar3.svg',
+    imgSrc: '/images/testimonial/university.jpg',
   },
   {
     profession: 'Empresas',
     name: 'Empresas de referência',
-    imgSrc: '/images/wework/avatar4.svg',
+    imgSrc: '/images/testimonial/natixis.jpg',
   },
 ]
 

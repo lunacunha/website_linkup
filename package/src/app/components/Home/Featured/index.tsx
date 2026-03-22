@@ -103,10 +103,17 @@ const Featured = () => {
   return (
     <section
       id='featured'
-      className="relative scroll-mt-28 bg-deepSlate dark:bg-darkmode after:absolute after:w-1/4 after:h-1/4 after:bg-[url('/images/wework/vector.svg')] after:top-72 after:right-0 after:bg-no-repeat">
+      className='relative scroll-mt-28 overflow-hidden py-12 lg:py-16'>
       <div className='container mx-auto max-w-7xl px-4 relative'>
-        <div className='text-center overflow-hidden'>
-          <h3 className='my-5'>As nossas iniciativas.</h3>
+        <div className='mx-auto mb-12 max-w-3xl text-center overflow-hidden'>
+          <p className='text-sm font-semibold uppercase tracking-[0.22em] text-primary/80'>
+            Iniciativas
+          </p>
+          <h3 className='mt-4'>Experiências que aproximam decisão e prática.</h3>
+          <p className='mt-5 text-lg leading-8 text-black/60'>
+            Um conjunto de formatos leves e relevantes para dar aos estudantes
+            contacto contínuo com o ecossistema profissional.
+          </p>
         </div>
 
         <Slider {...settings}>
@@ -116,8 +123,8 @@ const Featured = () => {
               ))
             : featured.map((items, i) => (
                 <div key={i}>
-                  <div className='bg-transparent m-3 rounded-3xl'>
-                    <div className='relative w-full h-[420px] overflow-hidden rounded-2xl'>
+                  <div className='m-3 rounded-[1.75rem] border border-slate-200 bg-white p-4'>
+                    <div className='relative w-full h-[420px] overflow-hidden rounded-[1.35rem] bg-slate-100'>
                       <Image
                         src={items.imgSrc}
                         alt={items.heading}
@@ -126,7 +133,7 @@ const Featured = () => {
                       />
                     </div>
                     <div>
-                      <h4 className='max-w-sm font-bold text-center sm:text-start my-6 text-black'>
+                      <h4 className='max-w-sm font-bold text-center sm:text-start mb-2 mt-6 text-black'>
                         {items.heading}
                       </h4>
                     </div>
