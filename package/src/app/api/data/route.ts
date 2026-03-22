@@ -63,7 +63,7 @@ const FeaturedData: featureddata[] = [
   {
     heading: 'Newsletter segmentada',
     description: 'Conteúdo relevante e regular para manter proximidade.',
-    imgSrc: '/images/featured/email.png',
+    imgSrc: '/images/featured/sopa-letras.png',
   },
   {
     heading: 'Open days',
@@ -78,7 +78,7 @@ const FeaturedData: featureddata[] = [
   {
     heading: 'Hackathons',
     description: 'Desafios colaborativos com contacto aplicado ao mercado.',
-    imgSrc: '/images/featured/feat4.jpg',
+    imgSrc: '/images/featured/hackathon.jpeg',
   },
 ]
 
