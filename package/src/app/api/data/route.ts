@@ -5,7 +5,6 @@ import { aboutdata } from '@/app/types/aboutdata'
 import { workdata } from '@/app/types/workdata'
 import { featureddata } from '@/app/types/featureddata'
 import { testimonials } from '@/app/types/testimonials'
-import { articles } from '@/app/types/articles'
 import { footerlinks } from '@/app/types/footerlinks'
 
 // header nav-links data
@@ -158,33 +157,6 @@ const TestimonialsData: testimonials[] = [
   },
 ]
 
-// artical data
-const ArticlesData: articles[] = [
-  {
-    time: '3 min',
-    heading: 'Porque um programa de nurture',
-    heading2: 'faz diferença na empregabilidade',
-    name: 'GoTalent',
-    date: 'março 2026',
-    imgSrc: '/images/articles/article.png',
-  },
-  {
-    time: '4 min',
-    heading: 'Como aproximar estudantes',
-    heading2: 'e empresas de forma natural',
-    name: 'GoTalent',
-    date: 'março 2026',
-    imgSrc: '/images/articles/article2.png',
-  },
-  {
-    time: '5 min',
-    heading: 'Da faculdade ao mercado:',
-    heading2: 'experiências que aceleram competências',
-    name: 'GoTalent',
-    date: 'março 2026',
-    imgSrc: '/images/articles/article3.png',
-  },
-]
 
 // footer links data
 const FooterLinksData: footerlinks[] = [
@@ -232,7 +204,6 @@ export const GET = () => {
     FeaturedData,
     PlansData,
     TestimonialsData,
-    ArticlesData,
     FooterLinksData,
   })
 }
