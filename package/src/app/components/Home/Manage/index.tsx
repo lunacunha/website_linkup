@@ -54,7 +54,7 @@ const Manage = () => {
                     {items.user}
                   </p>
 
-                  <Link href='#Contact'>
+                  <Link href='#contact'>
                     <button className='text-sm font-bold text-primary bg-transparent hover:bg-primary hover:text-white border-2 border-primary rounded-full py-4 px-10 mb-8 hover:cursor-pointer'>
                       Pedir mais informações
                     </button>
