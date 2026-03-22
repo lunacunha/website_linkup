@@ -22,11 +22,11 @@ const Hero = () => {
           </div>
           <div className='col-span-12 xl:col-span-7 lg:col-span-6 lg:block hidden'>
             <Image
-              src='/images/hero/banner-image.png'
+              src='/images/hero/home-alone-banner.png'
               alt='banner image'
-              width={600}
-              height={600}
-              className='w-full opacity-95'
+              width={520}
+              height={520}
+              className='mx-auto w-[82%] max-w-[520px] opacity-95'
             />
           </div>
         </div>
